@@ -256,18 +256,22 @@ body {
 
 /*** header ***/
 .title {
-
+  font: 1.5em 'Sansita One';
 }
 
-#my {}
+#my {
+  color: #ff8000;
+}
 
-#list {}
+#list {
+  color: grey;
+}
 
 
 /*** list wrapper ***/
 .listWrapper {
   margin: auto;
-  width: 60%;
+  width: 450px;
 }
 
 .addWrapper {
@@ -277,7 +281,7 @@ body {
 .addItem {
   border: 1px solid #fff;
   border-radius: 100px;
-  font: 1.5em Verdana;
+  font: 1.5em Arial;
   height: 35px;
   margin: 15px;
   outline: none;
@@ -329,7 +333,9 @@ body {
 }
 
 .itemContent {
-  margin: 16px 0 0 15px;
+  font: 1.5em 'Voltaire';
+  margin: 11px 0 0 15px;
+  vertical-align: middle;
 }
 
 .delete {
@@ -343,6 +349,7 @@ body {
 
 /*** completed items wrapper ***/
 .completeTitle{
+  font-family: Arial;
   padding: 10px;
   opacity: .3;
 }
@@ -361,6 +368,7 @@ body {
 
 .resetText {
   color: red;
+  font-family: Arial;
   opacity: .2;
   text-decoration: none;
 }
