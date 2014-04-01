@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>mylist</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href='//fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet'>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="mainWrapper">
+      <header class="title">
+        <h1>
+          <span id="my">my</span><span id="list">list</span>
+        </h1>
+      </header>
+      <div class="listWrapper">
+        <div class="addWrapper">
+          <form>
+            <input class="addItem" type="text" placeholder="+add item" maxlength="20" required>
+          </form>
+          <div class="howTo">
+            ?
+          </div>
+        </div>
+        <div class="activeItems clearfix">
+          <div class="item">
+            <form>
+              <input class="checkBox floatL" type="checkbox">
+              <span class="itemContent floatL">
+                item number 1
+              </span>
+              <div class="delete floatR">
+                X
+              </div>
+            </form>
+          </div>
+          <div class="item">
+            <form>
+              <input class="checkBox floatL" type="checkbox">
+              <span class="itemContent floatL">
+                item number 2
+              </span>
+              <div class="delete floatR">
+                X
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="completeItems">
+          <div class="completeTitle">
+            completed
+          </div>
+          <div class="item complete">
+            <form>
+              <input class="checkBox floatL" type="checkbox">
+              <span class="itemContent floatL">
+                item number 3
+              </span>
+              <div class="delete floatR">
+                X
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="resetWrapper">
+          <a class="resetText" href="#">
+            reset
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
