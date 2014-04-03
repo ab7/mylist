@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>mylist</title>
     <link rel="stylesheet" href="css/main.css">
-    <link href='//fonts.googleapis.com/css?family=Sansita+One|Voltaire' rel='stylesheet'>
+    <link href="//fonts.googleapis.com/css?family=Sansita+One|Allerta|Nova+Square" rel='stylesheet'>
     <script src="//code.jquery.com/jquery.min.js"></script>
 	<script src="js/main.js"></script>
   </head>
@@ -19,57 +19,44 @@
       <div class="listWrapper">
         <div class="addWrapper">
           <form>
-            <input class="addItem" type="text" placeholder="+add item" maxlength="20" required>
+            <input class="submitBox" type="text" placeholder="+add item" maxlength="31" required>
           </form>
-          <div class="howTo">
+          <button class="howTo">
             ?
+          </button>
+        </div>
+        <div class="activeItems">
+          <div class="item">
+            <form>
+              <input class="checkBox floatL" type="checkbox">
+              <span class="itemContent floatL">
+                This is a really long list item
+              </span>
+            </form>
+            <button class="delete floatR">
+              X
+            </button>
           </div>
         </div>
-        <div class="activeItems clearfix">
-          <div class="item">
-            <form>
-              <input class="checkBox floatL" type="checkbox">
-              <span class="itemContent floatL">
-                item number 1
-              </span>
-              <div class="delete floatR">
-                X
-              </div>
-            </form>
-          </div>
-          <div class="item">
-            <form>
-              <input class="checkBox floatL" type="checkbox">
-              <span class="itemContent floatL">
-                item number 2
-              </span>
-              <div class="delete floatR">
-                X
-              </div>
-            </form>
-          </div>
+        <div class="completeTitle">
+          completed
         </div>
         <div class="completeItems">
-          <div class="completeTitle">
-            completed
-          </div>
           <div class="item complete">
             <form>
-              <input class="checkBox floatL" type="checkbox">
+              <input class="checkBox floatL" type="checkbox" checked>
               <span class="itemContent floatL">
-                item number 3
+                This is a completed list item
               </span>
-              <div class="delete floatR">
-                X
-              </div>
             </form>
+            <button class="delete floatR">
+              X
+            </button>
           </div>
         </div>
-        <div class="resetWrapper">
-          <a class="resetText" href="#">
-            reset
-          </a>
-        </div>
+        <button class="reset">
+          reset
+        </button>
       </div>
     </div>
   </body>
