@@ -317,6 +317,7 @@ body {
   background-image: linear-gradient(to top, #A2A1A1 0%, #A1A0A0 100%);
   margin-top: 2px;
   margin-bottom: 2px;
+  position: relative;
   opacity: 1;
   transition: box-shadow .1s;
 }
@@ -391,6 +392,86 @@ body {
 .reset:hover {
   text-shadow: 1px 1px #ededed;
 }
+
+/*** how to list ***/
+.arrowR {
+  position: absolute;
+  left: 0;
+  top: 25px;
+  width: 30px
+}
+
+.arrowL {
+  position: absolute;
+  right: -20px;
+  top: 20px;
+  width: 30px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.addHow, .deleteHow, .completeHow, .completedHow, .editHow, .resetHow {
+  font: 1em 'Nothing You Could Do';
+  position: absolute;
+}
+
+.addHow {
+  display: none;
+  top: -23px;  
+}
+
+.deleteHow {
+  right: -10px;
+  top: -20px;  
+}
+
+.completeHow {
+  top: -23px;
+  left: -35px;
+}
+
+.completedHow {
+  top: 87px;
+  left: -35px;
+}
+
+.editHow {
+  left: 30px;
+  top: 55px;
+}
+
+.cancelHow {
+  font: .5em 'Nothing You Could Do';
+  position: absolute;
+  right: -34px;
+  top: 47px;
+}
+
+.resetHow {
+  left: 175px;
+  top: 190px;
+}
+
+.demo {
+  display: none;
+}
+
+.demo:hover {
+  border: none;
+  box-shadow: none;
+}
+
+.deleteDemo {
+  color: #8d2d2d;
+  font: 1em Verdana;
+  margin: 16px 9px 0 0;
+}
+
+
 
 
 /* ==========================================================================

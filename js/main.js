@@ -21,7 +21,7 @@ $(function() {
     });
   }
   
-  // complete and uncomplete item
+  // complete or uncomplete item
   function moveItem() {
     $('input[type=checkbox]').change(function() {
       var listItem = $(this).closest('.item');
@@ -38,10 +38,9 @@ $(function() {
     $('.item').dblclick(function(event) {
       $(this).find('.itemContent').hide();
       $(this).closest('.item').append('<input class="edit floatL" type="text" maxlength="31">');
-      var newText = $(this).closest('.item').find('.edit');
+      var newText = $(this).find('.edit');
       newText.focus();
       event.stopImmediatePropagation();
-      $(this).click(function() {return false;})
       
       // click outside of item div to esc
       $(document).one("click", function() {
@@ -99,8 +98,21 @@ $(function() {
   }
   
   // instructions
-  function instrctions() {
-    // click question mark to display instructions
+  function instructions() {
+    $('.howTo').click(function(event) {
+      $('.item').hide();
+      $('.addHow').fadeIn('slow');
+      $('.demo').fadeIn('slow');
+      $('.demo').find('.delete').show();
+      $(":input").prop("disabled", true);
+      event.stopPropagation();
+      $(document).one('click', function() {
+        $('.item').fadeIn('slow');
+        $('.addHow').hide();
+        $('.demo').hide();
+        $(":input").prop("disabled", false);
+      });
+    });
   }
   
   // start handlers
@@ -110,4 +122,5 @@ $(function() {
   editItem();
   deleteItem();
   resetList();
+  instructions();
 })

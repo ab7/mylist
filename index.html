@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>mylist</title>
     <link rel="stylesheet" href="css/main.css">
-    <link href="//fonts.googleapis.com/css?family=Sansita+One|Allerta|Nova+Square" rel='stylesheet'>
+    <link href="//fonts.googleapis.com/css?family=Sansita+One%7CAllerta%7CNova+Square%7CNothing+You+Could+Do" rel='stylesheet'>
     <script src="//code.jquery.com/jquery.min.js"></script>
 	<script src="js/main.js"></script>
   </head>
@@ -20,6 +20,10 @@
         <div class="addWrapper">
           <form>
             <input class="submitBox" type="text" placeholder="+add item" maxlength="31" required>
+            <div class="addHow">
+              Add an item here 
+              <img class="arrowR" src="images/arrow.gif" alt="arrow">
+            </div>
           </form>
           <button class="howTo">
             ?
@@ -30,12 +34,55 @@
             <form>
               <input class="checkBox floatL" type="checkbox">
               <span class="itemContent floatL">
-                This is a really long list item
+                take over the world
+              </span>
+              <button class="delete floatR">
+                X
+              </button>
+            </form>
+          </div>
+          <div class="item">
+            <form>
+              <input class="checkBox floatL" type="checkbox">
+              <span class="itemContent floatL">
+                tie my shoes
+              </span>
+              <button class="delete floatR">
+                X
+              </button>
+            </form>
+          </div>
+          <div class="item demo">
+            <form>
+              <input class="checkBox floatL" type="checkbox">
+              <span class="itemContent floatL">
+                I'm a list item
               </span>
             </form>
-            <button class="delete floatR">
+            <div class="deleteDemo floatR">
               X
-            </button>
+            </div>
+            <div class="deleteHow">
+              Click X to delete an item
+              <img class="arrowL" src="images/arrow.gif" alt="arrow">
+            </div>
+            <div class="completeHow">
+              Check to complete
+              <img class="arrowR" src="images/arrow.gif" alt="arrow">
+            </div>
+            <div class="editHow">
+              Double click the text to edit the item
+            </div>
+            <div class="cancelHow">
+              (ESC or click anywhere to cancel edit)
+            </div>
+            <div class="completedHow">
+              This one is completed
+              <img class="arrowR" src="images/arrow.gif" alt="arrow">
+            </div>
+            <div class="resetHow">
+              Reset here
+            </div>
           </div>
         </div>
         <div class="completeTitle">
@@ -46,7 +93,18 @@
             <form>
               <input class="checkBox floatL" type="checkbox" checked>
               <span class="itemContent floatL">
-                This is a completed list item
+                tie my shoes
+              </span>
+              <button class="delete floatR">
+                X
+              </button>
+            </form>
+          </div>
+          <div class="item complete demo">
+            <form>
+              <input class="checkBox floatL" type="checkbox" checked>
+              <span class="itemContent floatL">
+                Mission Accomplished
               </span>
             </form>
             <button class="delete floatR">
