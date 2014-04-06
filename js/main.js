@@ -2,21 +2,24 @@ $(function() {
   // get user input and validate
   function validate() {
     $('.submitBox').keypress(function(event) {
-      var item = $(this).val();
-      if (item.trim() == "") {
-        return
-      }
-      if (event.which == 13 && item) {
-        $('.activeItems').prepend(
-          $('<div class="item"><form><input class="checkBox floatL" type="checkbox"><span class="itemContent floatL">' + item + '</span><button class="delete floatR">X</button></form></div>')
-          .fadeIn('slow')
-        );
-        $(this).val("");
-        event.preventDefault();
-        itemAnimate();
-        editItem();
-        moveItem();
-        deleteItem();
+      if (event.which === 13) {
+        var item = $(this).val();
+        if (item) {
+          if (item.trim() === ""){
+            return
+          } else {
+            var part1 = '<div class="item"><input class="checkBox floatL" type="checkbox">';
+            var part2 = '<span class="itemContent floatL">';
+            var part3 = '</span><button class="delete floatR">X</button></div>';
+            var wholeItem = part1 + part2 + item + part3;
+            $('.activeItems').prepend(wholeItem);
+            $(this).val("");
+            itemAnimate();
+            editItem();
+            moveItem();
+            deleteItem();
+          }
+        }
       }
     });
   }
