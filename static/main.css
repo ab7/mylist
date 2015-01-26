@@ -4,7 +4,7 @@
 
 html {
   font-family: sans-serif;
-  -ms-text-size-adjust: 100%; 
+  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -236,8 +236,6 @@ th {
 
 body {
   background-color: #bfbfbf;
-  font-size: 135%;
-  min-width: 960px;
 }
 
 
@@ -270,7 +268,7 @@ body {
 /*** list wrapper ***/
 .listWrapper {
   margin: auto;
-  width: 450px;
+  max-width: 450px;
 }
 
 .addWrapper {
@@ -282,11 +280,12 @@ body {
   border-radius: 100px;
   font: 1.1em 'Allerta', Arial;
   height: 40px;
-  margin: 15px;
+  margin: 15px 0;
+  max-width: 375px;
   outline: none;
   text-align: center;
   transition: box-shadow .2s;
-  width: 375px
+  width: 100%;
 }
 
 .submitBox:hover, .submitBox:focus {
@@ -332,7 +331,7 @@ body {
 .itemContent {
   color: #4a4a4a;
   font: 1.2em 'Nova Square';
-  margin: 15px 0 0 15px;
+  margin: 20px 0 0 15px;
 }
 
 .delete {
@@ -421,12 +420,12 @@ body {
 
 .addHow {
   display: none;
-  top: -23px;  
+  top: -23px;
 }
 
 .deleteHow {
   right: -10px;
-  top: -20px;  
+  top: -20px;
 }
 
 .completeHow {
@@ -471,6 +470,15 @@ body {
   margin: 16px 9px 0 0;
 }
 
+@media all and (min-width: 450px) {
+  body {
+    font-size: 135%;
+  }
+
+  .itemContent {
+    margin-top: 15px;
+  }
+}
 
 
 
@@ -479,8 +487,8 @@ body {
    ========================================================================== */
 
 *, *:before, *:after {
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
  }
 
